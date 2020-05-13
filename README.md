@@ -19,9 +19,11 @@ This version is assembled as an install package and uses the WeeWX utility wee_e
 
 2. New faster install process using its own custom built installer.
 
+3. Wind speed output as rounded whole numbers rather than with decimal values as with the original design. 
+
 # Demo
 
-A live example of Weather34 WeeWX skin can be seen at https://claydonsweather.org.uk
+A live example of Weather34 WeeWX skin can be seen at http://lowellhighlandswx.mynetgear.com/weewx/weather34/index.php
 
 # Weather34 Historic Timeline of design 2014-2019 
 https://weather34.com/homeweatherstation/weather34timeline/weather34timeline.html
