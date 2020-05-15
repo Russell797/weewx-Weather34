@@ -89,9 +89,9 @@ if ($windunit=='kts'){$windunit="kn";}
 if ($windunit=='kn'){$weather["wind_gust_60min"] = number_format(1.94384*$weather["wind_gust_60min"], 1);}
 if ($windunit=='km/h'){$weather["wind_gust_60min"] = number_format(3.6*$weather["wind_gust_60min"], 1);}
 if ($windunit=='mph'){$weather["wind_gust_60min"] = number_format(2.236936*$weather["wind_gust_60min"], 1);}
-if($weather["wind_gust_60min"]>=50){echo "<ored>" ,number_format(round($weather["wind_gust_60min"],0))."</ored> ".$windunit;}
-else if($weather["wind_gust_60min"]>=30){echo "<oorange>" ,number_format(round($weather["wind_gust_60min"],0))."</oorange><valuetext> ".$windunit;}
-else if($weather["wind_gust_60min"]>=0){echo "<ogreen>" ,number_format(round($weather["wind_gust_60min"],0))."</ogreen><valuetext> ".$windunit;}echo " </valuetext>last 60 minutes ";
+if($weather["wind_gust_60min"]>=50){echo "<ored>" ,number_format(round($weather["wind_gust_60min"],1))."</ored> ".$windunit;}
+else if($weather["wind_gust_60min"]>=30){echo "<oorange>" ,number_format(round($weather["wind_gust_60min"],1))."</oorange><valuetext> ".$windunit;}
+else if($weather["wind_gust_60min"]>=0){echo "<ogreen>" ,number_format(round($weather["wind_gust_60min"],1))."</ogreen><valuetext> ".$windunit;}echo " </valuetext>last 60 minutes ";
 echo  " <br>Average <oblue>Wind Speed</oblue> last 10 minutes ";if($weather["wind_speed_avg"]>=30){echo "<ored>" ,number_format(round($weather["wind_speed_avg"]))."</ored> ".$windunit;}else if($weather["wind_speed_avg"]>=20){echo "<oorange>" .$weather["wind_speed_avg"]."</oorange><valuetext> ".$windunit;}
 else if($weather["wind_speed_avg"]>=0){echo "<ogreen>" ,number_format(round($weather["wind_speed_avg"]))."</ogreen><valuetext> ".$windunit;}
 echo "</valuetext>";

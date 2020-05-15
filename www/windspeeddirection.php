@@ -14,12 +14,12 @@ require_once('w34CombinedData.php');require_once('common.php');?>
 if ($weather["wind_units"]=='kts'){$weather["wind_units"]="kn";}
 
 //weather34-windspeed instantaneous
-if ($weather["wind_speed"]<=9){echo "&nbsp;&nbsp;&#8199;" .number_format(round($weather["wind_speed"],0));}else echo "&nbsp;&#8199;" .number_format(round($weather["wind_speed"],0));?>
+if ($weather["wind_speed"]<=9){echo "&nbsp;&nbsp;&#8199;" .number_format(round($weather["wind_speed"],1));}else echo "&nbsp;&#8199;" .number_format(round($weather["wind_speed"],1));?>
 <div class="windunitidspeed"><?php echo $lang['Currently'];?></div><div class="windunitspeed"><?php echo $weather["wind_units"]?></div></div>
 <div class="windgustvalue">
 
 <?php  
-if ($weather["wind_gust_speed"]*$toKnots>=26.9978){echo "&nbsp;&#8199;","<windred>",number_format(round($weather["wind_gust_speed"],0)),"</span>";}else if ($weather["wind_gust_speed"]*$toKnots>=21.5983){echo "&nbsp;&#8199;","<windorange>",number_format(round($weather["wind_gust_speed"],0)),"</span>";}else if ($weather["wind_gust_speed"]*$toKnots>=16.1987){echo "&nbsp;&#8199;","<windgreen>",number_format(round($weather["wind_gust_speed"],0)),"</span>";}else if ($weather["wind_gust_speed"]<=9){echo "&nbsp;&nbsp;&#8199;",number_format(round($weather["wind_gust_speed"],0));}else echo "&nbsp;&#8199;",number_format(round($weather["wind_gust_speed"],0));?>
+if ($weather["wind_gust_speed"]*$toKnots>=26.9978){echo "&nbsp;&#8199;","<windred>",number_format(round($weather["wind_gust_speed"],1)),"</span>";}else if ($weather["wind_gust_speed"]*$toKnots>=21.5983){echo "&nbsp;&#8199;","<windorange>",number_format(round($weather["wind_gust_speed"],1)),"</span>";}else if ($weather["wind_gust_speed"]*$toKnots>=16.1987){echo "&nbsp;&#8199;","<windgreen>",number_format(round($weather["wind_gust_speed"],1)),"</span>";}else if ($weather["wind_gust_speed"]<=9){echo "&nbsp;&nbsp;&#8199;",number_format(round($weather["wind_gust_speed"],1));}else echo "&nbsp;&#8199;",number_format(round($weather["wind_gust_speed"],1));?>
 <div class="windunitgust"><?php echo  $weather["wind_units"]?></div>
 <div class="windunitidgust"><?php echo $lang['Gust']; ?></div></span></div></div>
 <div class="windspeedtrend1">
